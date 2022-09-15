@@ -2,6 +2,7 @@
 #include<locale.h>
 #define D 2.54
 #define K 1.852
+#define F 2.704
 
 void calc() {
 	int num1, num2;
@@ -24,7 +25,7 @@ void dmtosm() {
 	puts("Введите целое число дюймов для перевода в сантиметры");
 	scanf("%d", &dym);
 	result = D * dym;
-	printf(" %d дюймов – это %.1f см", dym, result);
+	printf("%d англиских дюймов – это %.1f см \n%d старолитовских дюймов – это %.1f см ", dym, result,dym, F*dym);;
 }
 void seamtokm() {
 	int dym1;
@@ -39,6 +40,6 @@ void seamtokm() {
 void main() {
 	setlocale(LC_ALL, "RUS");
 	//calc();
-	//dmtosm();
-	seamtokm();
+	dmtosm();
+	//seamtokm();
 }
